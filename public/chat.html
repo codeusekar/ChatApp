@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chat Room</title>
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-purple-100">
+
+        <!-- All the messages are displayed -->
+        <div class="all-messages p-2 divide-y mb-10">
+            <div class="message">
+                <div class="py-3">
+                    <p class="text-purple-800"><b>Sarath</b> • <small class="text-purple-300">11:11 AM</small></p>
+                    <p class="text-purple-600">hello</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- scoll into view -->
+        <div id="scrollDown"></div>
+
+        <!-- Send message form -->
+        <div class="fixed bottom-0 left-0 bg-purple-500 w-full h-12">
+            <form class="w-full px-2" id="chat">
+                <div class="flex items-center border-purple-600 pt-2">
+                    <input 
+                    class="appearance-none bg-transparent border-none w-full text-white mr-3 py-1 px-2 leading-tight focus:outline-none placeholder-white" 
+                    type="text" 
+                    placeholder="Enter your message..." 
+                    aria-label="Your Message"
+                    name="message"
+                    id="message">
+                    <button 
+                    class="flex-shrink-0 bg-purple-600 hover:bg-purple-700 border-purple-600 hover:border-purple-700 text-sm border-4 text-white py-1 px-2 rounded" 
+                    type="submit">
+                    Send
+                    </button>
+                </div>
+                </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" crossorigin="anonymous"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
