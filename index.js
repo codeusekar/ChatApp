@@ -37,6 +37,6 @@ io.on('connection', (socket) => {
     })
 })
 
-var PORT = 8000 || process.env.PORT
+var PORT = process.env.PORT || 8000
 
 server.listen(PORT, () => console.log('Chat server running on PORT 8000'))
