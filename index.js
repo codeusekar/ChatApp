@@ -9,6 +9,8 @@ const { userJoined, getUser } =  require('./utils/users')
 const server = http.createServer(app)
 const io = socketio(server)
 
+require('dotenv').config()
+
 // Static folder
 app.use(express.static(path.join(__dirname, 'public')))
 
